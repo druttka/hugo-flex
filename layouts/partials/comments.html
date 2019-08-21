@@ -1,5 +1,9 @@
-{{ with .Site.Params.utterances }}
-{{ if in site.Params.mainSections $.Type | and .enable }}
-<script src="https://utteranc.es/client.js" repo="{{ .repo }}" issue-term="{{ .issueterm }}" theme="{{ .theme }}" crossorigin="anonymous" async></script>
-{{end}}
-{{end}}
+<script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//{{- .Site.Params.disqusShortname -}}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        s.setAttribute('crossorigin', "anonymous");
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
