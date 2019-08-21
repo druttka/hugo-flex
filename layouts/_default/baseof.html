@@ -24,6 +24,9 @@
   <script defer src="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
   {{ end }}
   {{ hugo.Generator }}
+  {{ if .Params.canonical }}
+  <link rel="canonical" href="{{ .Params.canonical }}" />
+  {{ end}}
 </head>
 <body>
   {{ partial "banner.html" .}}
