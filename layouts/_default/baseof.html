@@ -27,6 +27,7 @@
   {{ if .Params.canonical }}
   <link rel="canonical" href="{{ .Params.canonical }}" />
   {{ end}}
+  {{ template "_internal/google_analytics_async.html" . }}
 </head>
 <body>
   {{ partial "banner.html" .}}
